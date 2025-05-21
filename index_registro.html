@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/main_registro.css">
+  <link rel="stylesheet" href="./CSS/main_general.css">
+  <title>Registro</title>
+</head>
+
+<body>
+ 
+    <main class="form-container">
+      
+      <header class="titulo-registrarse">
+        <h3>Registrarse</h3>     
+      </header>  
+           
+          <form action="index_Login.html" method="get" class="register-form">
+            
+          <section class="datos-personales">
+
+          <article class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" required>
+          </article>
+
+          <article class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido" required>
+          </article>
+
+          <article class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese Email" required>
+          </article>
+
+          <article class="form-group">
+            <label for="user">Nombre de Usuario</label>
+            <input type="text" id="user" name="user" placeholder="Nombre de Usuario" required>
+          </article>
+
+          <article class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+          </article>
+
+          <article class="form-group">
+            <label for="repeatPassword">Repetir Contraseña</label>
+            <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña" required>
+          </article>
+        </section>
+        
+        <section class="payment-method">
+
+          <h2>Método de Pago</h2> <br>
+
+          <label for="metodo_pago">
+            <input type="radio" name="metodo_pago" value="tarjeta" class="metodo-tarjeta">
+            Tarjeta de Crédito
+          </label>
+          
+          <!-- Tarjeta de Crédito -->
+          <article class="form-group-pagos form-group-pagos-tarjeta">
+            <label class="metodo-card"><input type="text" name="numero_tarjeta" placeholder="Numero de Tarjeta"></label>
+            <label class="metodo-card"><input type="password" name="clave_tarjeta" placeholder="XXX"></label>
+          </article>
+
+          <!-- Cupón de Pago -->
+
+          <label for="metodo_pago">
+            <input type="radio" name="metodo_pago" value="cupon" class="metodo-tipos-pago" required>
+            Cupón de Pago
+          </label>
+          
+          <article class="form-group-pagos">
+            <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="pago-facil"> Pago
+              Fácil</label>
+            <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="rapipago">
+              Rapipago</label>
+          </article>
+
+          <label for="metodo_pago">
+            <input type="radio" name="metodo_pago" value="transferencia" class="metodo-transferencia">
+            Transferencia Bancaria
+          </label>
+
+          <!-- Transferencia Bancaria -->
+          <article class="form-group-pagos">
+            <p>CBU: 1234567890123456789012</p>
+          </article>
+
+          <!-- Botón ENVIAR / CANCELAR form -->
+          <article class="form-group-pagos form-group-pagos-btn">
+            <input type="submit" value="Enviar" class="btn-Enviar">
+            <a href="index_Login.html"> Cancelar</a>
+          </article>
+        </section>
+      </form>
+    </main>
+</body>
+
+</html>

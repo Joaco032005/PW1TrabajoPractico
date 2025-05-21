@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* Evita que el contido salga del contenedor */
+}
+
+/* Contendor con los distintos contenidos de la pagina*/
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+/* Contenedor con del iframe y el boton para comenzar */
+.info .info__content{
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Contenedor con los datos acerca del contenido seleccionado(titulo, duracion, genero, actores y resumen) */
+.info .info__description{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    row-gap: 1.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+
+/* Contenedor con contenido relacionado al contenido seleccionado*/
+.seccionSimilares{
+    display: flex;
+    width: 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3%;
+    
+}
+
+/* Titulo que marca el nombre de la seccion(similares)*/
+.seccionSimilares .similares__title{
+    font-size: 2rem;
+}
+
+/* Grilla con el contenido relacionado(contiene img-primary) */
+.seccionSimilares .similares__grilla{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 14rem;
+    /* Genera filas automaticas con un tamaño preestablecido */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1%;
+}
+
+
+/* ESTILOS RESPONSIVOS */
+
+/* Para tablets y pantallas medianas */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+   
+    
+    .seccionSimilares .similares__grilla{
+        grid-template-columns: repeat(2, 1fr);
+        /* Modifica el tamaño de la grilla de similares(de 3 columnas a 2), para adaptarla a tablets y pantallas medianas */
+    }
+}
+
+
+/* Para tablets pequñas y celulares */
+@media only screen and (max-width: 768px){ 
+    
+    .info .info__description{
+        grid-template-columns: 1fr;
+        /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
+        align-items: center;
+        /* Cento horizontalmente los items de la grilla */
+        text-align: center;
+        /* Centro horizontalmente el texto */
+        gap: 0;
+        /* Desaparezco el espacio entre el texto(p), y su label */
+        font-size: 2em;
+        /* Agrando el tamaño de la fuente, para adaptarla a tablets pequeñas y celulares */
+    }
+
+    .info .info__description p{
+        margin-bottom: 1.3em;
+    }
+
+    .seccionSimilares{
+        align-items: center;
+          /* Centro horizontalmente el los elemntos(sirve para centrar el h4 = similares) */
+        margin-top: 3em;
+        /* Agrando el margin top(separacion entre seccionSimilares e info__description), para hacer la division mas notoria tablets pequeñas y celulares */
+ }
+
+    .seccionSimilares .similares__grilla{
+        grid-template-columns: 1fr;
+        /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
+       grid-template-rows: repeat(3, 12em);
+        /* Agrando el tamaño de las filas(contiene img-primary), haciendo mas visible su contenido, para adaptarla a tablets pequeñas y celulares */
+    }
+   
+}

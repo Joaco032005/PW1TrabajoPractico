@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Login</title>
+    <link rel="stylesheet" href="./CSS/main_Login.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="login-box">
+            <header>
+                <h1>Cinetrix</h1>
+                <p>Inicia sesión para ver tus películas y series favoritas</p>
+            </header>
+            <form action="./index_home.html" method="get">
+
+                <label for="usuario" class="sr-usuarios">Usuario o correo</label>
+                <input type="text" id="usuario" name="usuario" size="50" placeholder="Usuario o correo" required>
+
+                <label for="password" class="sr-usuarios">Contraseña</label>
+                <input type="password" id="password" name="password" size="20" placeholder="Contraseña" required>
+
+                <button class="boton-iniciar" type="submit" name="iniciar-sesion" id="btn-iniciar-sesion">INICIAR
+                    SESIÓN</button>
+
+                <br>
+
+                <article class="checkbox-container">
+                    <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recordar</label>
+                </article>
+            </form>
+
+            <nav class="extras">
+                <ul>
+                    <li>
+                        <a href="./index_RecuperarContrasenia.html">¿Olvidaste tu contraseña?</a>
+                    </li>
+                    <li>
+                        <a href="index_registro.html">Crear cuenta nueva</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    </header>
+    <footer class="footer">
+        <p>
+            " Joaquin Basilico,
+            Valentin Rodriguez,
+            Alexis Villacota,
+            Franco Varela."
+        </p>
+    </footer>
+
+</body>
+
+</html>

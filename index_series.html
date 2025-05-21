@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main_general.css">
+    <link rel="stylesheet" href="CSS/main_serie.css">
+</head>
+<body>
+     <!-- Contenedor de toda la pagina -->
+    <div class="contenedorPrincipal">    
+    
+    <!-- Menu principal para la vista desktop -->
+    <section class="menu">
+    <nav class="menu__content">  
+    <ul class="content__lista"> 
+        <li class="itemlist"> 
+        <a href="./index_home.html" class="btn btn-primary">home</a>
+        </li> 
+        
+        <li class="itemlist"> 
+        <a href="./index_PerfilUsuario.html" class="btn btn-primary">perfil</a>
+        </li>
+        
+        <li class="itemlist"> 
+        <a href="index_vistaSeries.html" class="btn btn-view">series</a>
+        </li>
+        
+        <li class="itemlist"> 
+        <a href="index_vistaPeliculas.html" class="btn btn-primary">peliculas</a>
+        </li>
+    </ul> 
+    </nav>
+    </section>
+
+    
+
+    <main class="main">
+    <section class="iconsSection">    
+    <nav class="icon__nav">
+
+        <ul class="icon__list">
+            <li>
+            <a href="./index_home.html" class="btn btn-icon">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="50" 
+            height="50" 
+            fill="currentColor" 
+            class="icon__item"
+            viewBox="0 0 16 16">   
+            <path 
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+            </svg>
+            </a>
+            </li>
+    
+            <li>
+            <a href="./index_vistaPeliculas.html" class="btn btn-icon">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="50" 
+            height="50" 
+            fill="currentColor" 
+            class="icon__item"
+            viewBox="0 0 16 16">
+            <path 
+            d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+            </svg>
+            </a>
+            
+            <li>
+            <a href="./index_vistaSeries.html" class="btn btn-icon">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="50" 
+            height="50" 
+            fill="currentColor" 
+            class="icon__item"
+            viewBox="0 0 16 16">
+            <path 
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"/>
+            </svg>
+            </a>
+            </li>
+    
+            <li>
+            <a href="./index_PerfilUsuario.html" class="btn btn-icon">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="50" 
+            height="50" 
+            fill="currentColor" 
+            class="icon__item"
+            viewBox="0 0 16 16">
+            <path 
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            </a>    
+            </li>
+            
+        </ul>
+    </nav>
+    </section>
+
+     <section class="info"> 
+
+    <article class = "info__content">
+    <!-- Trailer de la serie --> 
+    <iframe class="video video-primary" 
+    width="100%" 
+    height="600" 
+    src="https://www.youtube.com/embed/yyGetSp7CIc?si=2JSRor_MhDPm1J06" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen></iframe>
+
+
+    <article class="selectempycap">
+    
+    <div class="temporadas">
+    <label class= "label label-secondary" for="temporadas">Temporada</label> 
+    <select class="input input-primary" name="temporada" id="temporadas">
+        <option value="temporada1">1</option>
+        <option value="temporada2">2</option>
+    </select>
+    </div>
+
+    <div class="capitulos"> 
+    <label class=" label label-secondary" for="capitulos">Episodio</label> 
+    <select class="input input-primary" name="capitulo" id="capitulos">
+        <option value="capitulo1">1</option>
+        <option value="capitulo2">2</option>
+        <option value="capitulo3">3</option>
+        <option value="capitulo4">4</option>
+        <option value="capitulo4">6</option>
+        <option value="capitulo4">7</option>
+    </select>   
+    </div>    
+    </article>
+    
+    <!-- Boton de comienzo de la serie -->
+    <a href="https://www.youtube.com/watch?v=qQ-6SCsNf-o&ab_channel=Alesanpty" target="_blank" class="btn btn-secundary">Comenzar</a><!--Clase general btn-secundary(boton de comienzo) con un link a Youtube(escena de la pelicula) y un target="_blank"(para que se abra en una nueva pestaña del navegador)--> 
+        
+    </article>
+ 
+
+      <!-- Contenedor con la descripcion de la serie -->
+    <article class="info__description">
+
+        <!-- Titulo de la serie -->
+        <label class = "label label-primary" for="titulo">Titulo:</label>
+        <p id="titulo" class="dato__content">The Last Of Us</p>
+
+        <!-- Genero de la pelicula -->
+        <label class = "label label-primary" for="genero">Genero:</label>
+        <p id="genero"  class="dato__content">drama postapocalíptica</p>
+        
+        <!-- Actores de la pelicula -->
+        <label class = "label label-primary" for="actores">Actores:</label>
+        <p id="actores" class="dato__content">
+        <a href="https://es.wikipedia.org/wiki/Pedro_Pascal" target="_blank" class="btn btn-tertiary">Pedro Pascal</a>, 
+        <a href="https://es.wikipedia.org/wiki/Bella_Ramsey" target="_blank" class="btn btn-tertiary">Bella Ramsey</a>, 
+        <a href="https://es.wikipedia.org/wiki/Gabriel_Luna" target="_blank" class="btn btn-tertiary">Gabriel Luna</a>, 
+        <a href="https://es.wikipedia.org/wiki/Isabela_Merced" target="_blank" class="btn btn-tertiary">Isabela Merced</a>, 
+        <a href="https://es.wikipedia.org/wiki/Young_Mazino" target="_blank" class="btn btn-tertiary">Young Mazino</a>, 
+        <a href="https://es.wikipedia.org/wiki/Rutina_Wesley" target="_blank" class="btn btn-tertiary">Rutina Wesley</a>, 
+        <a href="https://es.wikipedia.org/wiki/Kaitlyn_Dever" target="_blank" class="btn btn-tertiary">Kaitlyn Dever</a>
+        </p> <!--Clase general btn-tertiary(boton con hover resaltado) con un link a Wikipedia(informacion del actor) y un target="_blank"--> 
+        
+        <!-- Resumen de la pelicula -->
+        <label class = "label label-primary" for="resumen">Resumen:</label>
+        <p id="resumen" class="dato__content">Veinte años después de la destrucción de la civilización moderna, Joel, un aguerrido superviviente, es contratado para sacar a Ellie, una joven de 14 años, de una opresiva zona de cuarentena. Lo que empieza como un trabajo sencillo pronto se convierte en un viaje brutal y desgarrador, ya que ambos deben atravesar Estados Unidos y depender el uno del otro para sobrevivir.</p>
+    
+    </article>
+    </section>
+
+   <!-- Contenedor de similares -->
+   <section class="seccionSimilares">
+    <h3 class="similares__title">Similares</h3>
+   
+    <!-- Grilla con peliculas similares -->
+    <div class="similares__grilla">
+        <a class="btn btn-img" href="index_series.html"><img class="img img-primary" src="https://cinepremiere.com.mx/wp-content/uploads/2023/10/the-walking-dead-carrusel-900x506.jpg" alt="The walking dead"></a>
+        <a class="btn btn-img" href="index_series.html"><img class="img img-primary" src="https://lumiere-a.akamaihd.net/v1/images/au_cg_disneyplus_marvel_hawkeye_horizontal_f86c4ddc.jpeg?region=0,0,1460,823&width=960" alt="Hawkeye"></a>
+        <a class="btn btn-img" href="index_pelicula.html"><img class="img img-primary" src="https://miro.medium.com/v2/resize:fit:600/0*aGjCLKAPLaPrJhe5.jpg" alt="Logan"></a>
+    </div>
+   </section>
+   </main>
+    </div>
+
+    <footer class="footer">    
+       <p>
+       Joaquin Basilico,  
+       Valentin Rodriguez,
+       Alexis Villacota,
+       Franco Varela.
+       </p>
+</footer>
+</body>
+</html>

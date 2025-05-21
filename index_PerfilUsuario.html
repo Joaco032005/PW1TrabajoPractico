@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vista Perfil de Usuario</title>
+  <link rel="stylesheet" href="./CSS/main_Perfil.css" />
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- Cabecera con la imagen y el nombre del usuario -->
+    <header>
+      <img class="imagen-usuario" src="img/FotoDePerfilUsuario.png" alt="Foto del usuario" />
+      <div class="nombre-usuario">
+        <h4 id="nombre-usuario">Lionel Messi</h4>
+      </div>
+    </header>
+
+    <!-- Formulario con las columnas -->
+    <form action="./index_home.html" method="get">
+      <section class="perfil-grid">
+
+        <!-- Columna izquierda -->
+        <article class="columna-izquierda">
+          <ul>
+            <li>E-mail: messi@gmail.com</li>
+            <li>Contraseña: ************</li>
+          </ul>
+
+          <label for="nueva-contraseña">Nueva contraseña:</label>
+          <input type="password" id="nueva-contraseña" name="nueva-contraseña" placeholder="Ingrese nueva contraseña"
+            required />
+
+          <label for="repetir-contraseña">Repetir contraseña:</label>
+          <input type="password" id="repetir-contraseña" name="repetir-contraseña"
+            placeholder="Ingrese nueva contraseña" required />
+        </article>
+
+        <!-- Columna derecha -->
+        <article class="columna-derecha">
+          <h4 id="método-pago">Métodos de pago</h4>
+
+          <label>
+            <input type="radio" name="metodo-pago" value="tarjeta" />
+            Tarjeta de Crédito
+          </label>
+          <div class="fila-tarjeta">
+            <input type="text" name="numero-tarjeta" placeholder="Número de tarjeta"/>
+            <input type="text" name="codigo-seguridad" placeholder="XXX" maxlength="3"/>
+          </div>
+
+          <label>
+            <input type="radio" name="metodo-pago" value="cupon" required />
+            Cupón de pago
+          </label>
+
+          <div class="subopciones">
+            <label><input type="radio" name="cupon-pago" /> Pago Fácil</label>
+            <label><input type="radio" name="cupon-pago" /> RapiPago</label>
+          </div>
+
+          <label>
+            <input type="radio" name="metodo-pago" value="transferencia" required />
+            Transferencia bancaria
+          </label>
+
+          <div class="subopciones">
+            <p>CBU: 2183909411100018971375</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- <form action="./index_home.html" method="get"> -->
+        <section class="acciones">
+          <button class="botón guardar" type="submit" name="guardar" id="guardar-cambios">Guardar cambios</button>
+
+          <a href="./index_Login.html" class="botón cancelar" id="cancelar-sub">Cancelar
+            subscripción</a>
+        </section>
+      <!-- </form> -->
+
+
+
+      <!-- Botones de acción (guardar cambios y cancelar suscripción) -->
+      <!-- <section class="acciones"> -->
+      <!-- Enlace que simula un botón de guardar cambios -->
+      <!-- <a href="./indexLogin.html" class="botón guardar">Guardar cambios</a> -->
+
+      <!-- Enlace que simula un botón de cancelar suscripción -->
+      <!-- <a href="./indexLogin.html" class="botón cancelar">Cancelar subscripción</a>
+      </section> -->
+    </form>
+  </main>
+
+
+  <footer class="footer">
+    <p>
+      " Joaquin Basilico,
+      Valentin Rodriguez,
+      Alexis Villacota,
+      Franco Varela."
+    </p>
+  </footer>
+</body>
+
+</html>

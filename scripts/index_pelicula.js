@@ -29,7 +29,8 @@ function mostrarContenidoPorTitulo(arrayDB) {
        </iframe>`;
     document.querySelector(
       ".boton-comenzar"
-    ).innerHTML = `<a href="${resultado.trailer}" target="_blank">COMENZAR</a>`;
+    ).innerHTML = `<a href="${resultado.trailer}" target="_blank" style="color: white; text-decoration: none;">COMENZAR</a>`;
+
     document.getElementById("titulo").textContent = resultado.titulo;
     document.getElementById("genero").textContent = resultado.genero;
     document.getElementById("actores").textContent = resultado.actores;

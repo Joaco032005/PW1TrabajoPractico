@@ -15,7 +15,7 @@ class Carrusel {
     this.slidesPorPagina = this.getSlidesPorPagina();
 
     this.addEventListeners();
-    this.updateCarrusel();
+    this.actualizaCarrusel();
   }
 
   getSlidesPorPagina() {

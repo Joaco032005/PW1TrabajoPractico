@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-html{
+html {
   height: 100%;
 }
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 .titulo-registrarse {
-  color:white;
+  color: white;
   text-align: center;
   font-size: 1.85rem;
 }
@@ -138,7 +138,7 @@ h2 {
 }
 
 .metodo-card input {
-  width: 100%; 
+  width: 100%;
   max-width: 100%;
   padding: 8px;
   border-radius: 0.25rem;
@@ -163,7 +163,7 @@ button[type="submit"] {
   color: black;
 }
 
-.form-group-pagos a{
+.form-group-pagos a {
   width: 10rem;
   height: 2rem;
   font-size: 1rem;
@@ -183,6 +183,21 @@ button[type="submit"] {
 
 .cancel:hover {
   background-color: #701515;
+}
+
+.btn-volver-login {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(255, 123, 0);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.btn-volver-login:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* MEDIA QUERIES */
@@ -224,11 +239,10 @@ button[type="submit"] {
     margin-left: 0rem;
   }
 
-  .form-group-pagos-btn{
+  .form-group-pagos-btn {
     display: flex;
     gap: 1rem;
     flex-direction: column;
-
   }
 
   .metodo-cupon:nth-child(1) {
@@ -252,7 +266,6 @@ button[type="submit"] {
     width: 30%;
   }
 }
-
 
 @media (max-width: 330px) {
 }

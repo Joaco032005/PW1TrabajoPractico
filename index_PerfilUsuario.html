@@ -11,32 +11,43 @@
 <body>
   <main class="container">
 
-    <!-- Cabecera con la imagen y el nombre del usuario -->
-    <header>
+    <!-- Cabecera -->
+    <header class="perfil-header">
+      <a href="index_Home.html" class="btn-volver-login">← Volver al Home</a>
       <img class="imagen-usuario" src="img/FotoDePerfilUsuario.png" alt="Foto del usuario" />
       <div class="nombre-usuario">
-        <h4 id="nombre-usuario">Lionel Messi</h4>
+        <h4 id="nombre-usuario"></h4>
       </div>
+      <a href="index.html" class="btn-cerrar-sesion">Cerrar sesión</a>
     </header>
 
-    <!-- Formulario con las columnas -->
-    <form action="./index_Home.html" method="get">
+    <!-- Formulario -->
+    <form action="#" method="post" novalidate>
       <section class="perfil-grid">
 
         <!-- Columna izquierda -->
         <article class="columna-izquierda">
           <ul>
-            <li>E-mail: messi@gmail.com</li>
+            <li id="email-usuario">E-mail: </li>
             <li>Contraseña: ************</li>
           </ul>
 
+          <label for="nombre-usuario-input">Nombre:</label>
+          <input type="text" id="nombre-usuario-input" name="nombre-usuario" placeholder="Ingrese nombre de usuario" />
+          <small class="mensaje-error" id="error-nombre"></small>
+
+          <label for="email-usuario-input">Email:</label>
+          <input type="email" id="email-usuario-input" name="email-usuario" placeholder="Ingrese email" />
+          <small class="mensaje-error" id="error-email"></small>
+
           <label for="nueva-contraseña">Nueva contraseña:</label>
-          <input type="password" id="nueva-contraseña" name="nueva-contraseña" placeholder="Ingrese nueva contraseña"
-            required />
+          <input type="password" id="nueva-contraseña" name="nueva-contraseña" placeholder="Ingrese nueva contraseña" />
+          <small class="mensaje-error" id="error-pass"></small>
 
           <label for="repetir-contraseña">Repetir contraseña:</label>
           <input type="password" id="repetir-contraseña" name="repetir-contraseña"
-            placeholder="Ingrese nueva contraseña" required />
+            placeholder="Ingrese nueva contraseña" />
+          <small class="mensaje-error" id="error-pass-repeat"></small>
         </article>
 
         <!-- Columna derecha -->
@@ -48,25 +59,26 @@
             Tarjeta de Crédito
           </label>
           <div class="fila-tarjeta">
-            <input type="text" name="numero-tarjeta" placeholder="Número de tarjeta"/>
-            <input type="text" name="codigo-seguridad" placeholder="XXX" maxlength="3"/>
+            <input type="text" name="numero-tarjeta" placeholder="Número de tarjeta" />
+            <input type="text" name="codigo-seguridad" placeholder="XXX" maxlength="3" />
+            <small class="mensaje-error" id="error-codigo"></small>
           </div>
+          <small class="mensaje-error" id="error-tarjeta"></small>
 
           <label>
-            <input type="radio" name="metodo-pago" value="cupon" required />
+            <input type="radio" name="metodo-pago" value="cupon" />
             Cupón de pago
           </label>
-
           <div class="subopciones">
-            <label><input type="radio" name="cupon-pago" /> Pago Fácil</label>
-            <label><input type="radio" name="cupon-pago" /> RapiPago</label>
+            <label><input type="radio" name="cupon-pago" value="Pago Fácil" /> Pago Fácil</label>
+            <label><input type="radio" name="cupon-pago" value="RapiPago" /> RapiPago</label>
           </div>
+          <small class="mensaje-error" id="error-cupon"></small>
 
           <label>
-            <input type="radio" name="metodo-pago" value="transferencia" required />
+            <input type="radio" name="metodo-pago" value="transferencia" />
             Transferencia bancaria
           </label>
-
           <div class="subopciones">
             <p>CBU: 2183909411100018971375</p>
           </div>
@@ -74,34 +86,19 @@
 
       </section>
 
-      <!-- <form action="./index_home.html" method="get"> -->
-        <section class="acciones">
-          <button class="botón guardar" type="submit" name="guardar" id="guardar-cambios">Guardar cambios</button>
-
-          <a href="./index.html" class="botón cancelar" id="cancelar-sub">Cancelar subscripción</a>
-        </section>
-      <!-- </form> -->
-       
-      <!-- Botones de acción (guardar cambios y cancelar suscripción) -->
-      <!-- <section class="acciones"> -->
-      <!-- Enlace que simula un botón de guardar cambios -->
-      <!-- <a href="./indexLogin.html" class="botón guardar">Guardar cambios</a> -->
-
-      <!-- Enlace que simula un botón de cancelar suscripción -->
-      <!-- <a href="./indexLogin.html" class="botón cancelar">Cancelar subscripción</a>
-      </section> -->
+      <!-- Botones -->
+      <section class="acciones">
+        <button class="botón guardar" type="submit" name="guardar" id="guardar-cambios" disabled>Guardar
+          cambios</button>
+        <button type="button" class="botón cancelar" id="cancelar-sub">Cancelar subscripción</button>
+      </section>
     </form>
   </main>
 
-
   <footer class="footer">
-    <p>
-      " Joaquin Basilico,
-      Valentin Rodriguez,
-      Alexis Villacota,
-      Franco Varela."
-    </p>
+    <p>" Joaquin Basilico, Valentin Rodriguez, Alexis Villacota, Franco Varela."</p>
   </footer>
+  <script src="./scripts/index_perfil.js"></script>
 </body>
 
 </html>

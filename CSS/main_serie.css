@@ -1,129 +1,239 @@
-*{
-margin: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 /* Contendor con los distintos contenidos de la pagina*/
-.info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 90%;
-    box-sizing: border-box;
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
-.selectempycap{
-    font-size: 1.6rem;
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
+.contenedor-capitulos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
 }
-.input-primary{
-    width: 3rem;
+
+.contenedor-capitulos select {
+  width: 70%;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.contenedor-capitulos label {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.iframe {
+  width: 100%;
+  height: 30rem;
+}
+
+.video-primary {
+  width: 100%;
+  height: 33rem;
+  max-width: 100%;
+  border: none;
+}
+
+.selectempycap {
+  font-size: 1.6rem;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+.input-primary {
+  width: 3rem;
 }
 
 /* Contenedor con del iframe y el boton para comenzar */
-.info .info__content{
-    max-width: 100%;
-    width: 100%;
-}
-.info .info__description{
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    row-gap: 1.5rem;
-    width: 100%;
-    font-size: 1.2rem;
-    margin-top: 2%;
-    margin-bottom: 2%;
+.info .info__content {
+  max-width: 100%;
+  width: 100%;
 }
 
-/* Contenedor con contenido relacionado al contenido seleccionado*/
-.seccionSimilares{
-    display: flex;
-    width: 90%;
-    max-width: 90%;
-    box-sizing: border-box;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 3%;
-    
+/* Descripción del contenido */
+.info .info__description {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  row-gap: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-/* Titulo que marca el nombre de la seccion(similares)*/
-.seccionSimilares .similares__title{
-    font-size: 2rem;
+/* Sección de similares */
+.seccionSimilares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 90%;
+  margin-top: 3%;
 }
 
-/* Grilla con el contenido relacionado(contiene img-primary) */
-.seccionSimilares .similares__grilla{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 14rem;
-    /* Genera filas automaticas con un tamaño preestablecido */
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1%;
+.similares__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
+.similares__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrusel__track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrusel__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.carrusel__track a {
+  flex: 0 0 calc(100% / 3); /* 3 por vista por defecto */
+  height: 14rem;
+}
+
+.carrusel__track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botones del carrusel */
+.carrusel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 123, 0, 0.8);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.carrusel__btn--prev {
+  left: 0.5rem;
+}
+
+.carrusel__btn--next {
+  right: 0.5rem;
+}
 
 /* ESTILOS RESPONSIVOS */
 
 /* Para tablets y pantallas medianas */
-@media screen and (min-width: 769px) and (max-width: 1024px){
-   
-    
-    .seccionSimilares .similares__grilla{
-        grid-template-columns: repeat(2, 1fr);
-        /* Modifica el tamaño de la grilla de similares(de 3 columnas a 2), para adaptarla a tablets y pantallas medianas */
-    }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .seccionSimilares .similares__grilla {
+    grid-template-columns: repeat(2, 1fr);
+    /* Modifica el tamaño de la grilla de similares(de 3 columnas a 2), para adaptarla a tablets y pantallas medianas */
+  }
 }
-
 
 /* Para tablets pequñas y celulares */
-@media only screen and (max-width: 768px){ 
-    
-    .info .info__description{
-        grid-template-columns: 1fr;
-        /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
-        align-items: center;
-        /* Cento horizontalmente los items de la grilla */
-        text-align: center;
-        /* Centro horizontalmente el texto */
-        gap: 0;
-        /* Desaparezco el espacio entre el texto(p), y su label */
-        font-size: 2em;
-        /* Agrando el tamaño de la fuente, para adaptarla a tablets pequeñas y celulares */
-    }
+@media only screen and (max-width: 768px) {
+  .info .info__description {
+    grid-template-columns: 1fr;
+    /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
+    align-items: center;
+    /* Cento horizontalmente los items de la grilla */
+    text-align: center;
+    /* Centro horizontalmente el texto */
+    gap: 0;
+    /* Desaparezco el espacio entre el texto(p), y su label */
+    font-size: 2em;
+    /* Agrando el tamaño de la fuente, para adaptarla a tablets pequeñas y celulares */
+  }
 
-    .info .info__description p{
-        margin-bottom: 1.3em;
-    }
+  .info .info__description p {
+    margin-bottom: 1.3em;
+  }
 
-    .seccionSimilares{
-        align-items: center;
-          /* Centro horizontalmente el los elemntos(sirve para centrar el h4 = similares) */
-        margin-top: 3em;
-        /* Agrando el margin top(separacion entre seccionSimilares e info__description), para hacer la division mas notoria tablets pequeñas y celulares */
- }
+  .seccionSimilares {
+    align-items: center;
+    /* Centro horizontalmente el los elemntos(sirve para centrar el h4 = similares) */
+    margin-top: 3em;
+    /* Agrando el margin top(separacion entre seccionSimilares e info__description), para hacer la division mas notoria tablets pequeñas y celulares */
+  }
 
-    .seccionSimilares .similares__grilla{
-        grid-template-columns: 1fr;
-        /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
-       grid-template-rows: repeat(3, 12em);
-        /* Agrando el tamaño de las filas(contiene img-primary), haciendo mas visible su contenido, para adaptarla a tablets pequeñas y celulares */
-    }
+  .seccionSimilares .similares__grilla {
+    grid-template-columns: 1fr;
+    /* Modifica el tamaño de la grilla(de 2 columnas a 1), para adaptarla a tablets pequeñas y celulares */
+    grid-template-rows: repeat(3, 12em);
+    /* Agrando el tamaño de las filas(contiene img-primary), haciendo mas visible su contenido, para adaptarla a tablets pequeñas y celulares */
+  }
 
-    .selectempycap{
-        
-        align-items:center;
-        flex-direction: column;
-        font-size: 2em;
-        gap: 0;
-    }
+  .selectempycap {
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    gap: 0;
+  }
 }
 
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .carrusel__track a {
+    flex: 0 0 calc(100% / 2); /* 2 por vista */
+  }
+}
+
+/* Celulares */
+@media screen and (max-width: 768px) {
+  .info .info__description {
+    grid-template-columns: 1fr;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .info .info__description p {
+    margin-bottom: 1.3em;
+  }
+
+  .seccionSimilares {
+    margin-top: 3em;
+  }
+
+  .carrusel__track a {
+    flex: 0 0 100%; /* 1 por vista */
+  }
+
+  .contenedor-capitulos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .contenedor-capitulos select {
+    width: 75%;
+    text-align: center;
+    padding: 0.2rem;
+  }
+}

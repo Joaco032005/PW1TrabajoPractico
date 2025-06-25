@@ -74,7 +74,7 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"], input[type="email"] {
   background-color: #222;
   padding: 0.625rem; /* 10px */
   border: none;
@@ -159,6 +159,54 @@ input[type="checkbox"] {
 .nombre-usuario {
   margin: 0;
 }
+
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.875rem; /* 30px */
+  flex-wrap: wrap;
+}
+
+.btn-cerrar-sesion {
+  background-color: rgba(255, 123, 0, 0.849);
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+  opacity: 0.9;
+}
+
+.btn-volver-login {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(255, 123, 0);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  margin-right: auto;
+}
+
+.btn-volver-login:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+.mensaje-error {
+  color: red;
+  font-size: 0.8rem;
+  display: block;
+}
+
+
 
 /* MEDIA QUERIES */
 @media (max-width: 48rem) { /* 768px */

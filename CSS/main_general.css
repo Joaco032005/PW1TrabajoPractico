@@ -1,362 +1,358 @@
 /* RESET DE ESTILOS */
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* ESTILOS GENERALES */
-body{
-     font-family:Arial, Helvetica, sans-serif;
-    color: white;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 /* CONTENEDOR GENERAL DE TODA LA PAGINA (MAIN + MENU) */
-.contenedorPrincipal{
-max-width: 100%;
-width: 100%;
-/* Aseguramos que se ajuste en pantallas pequeñas */
-display: flex;
-box-sizing:border-box;
+.contenedorPrincipal {
+  max-width: 100%;
+  width: 100%;
+  /* Aseguramos que se ajuste en pantallas pequeñas */
+  display: flex;
+  box-sizing: border-box;
 }
 
 /* Seccion que contiene la info de la pagina(no toma el menu horizontal) */
-.main{
-    background-color: rgb(12, 12, 12);
-    border: 0.2rem , solid , rgb(255, 123, 0);
-    border-left: 0;
-    width: 100%;
-    max-width: 100%;
-    /* Máximo ancho del contenedor */
-    display: flex;
-    flex-direction: column;
-    padding: 3% 0 5% 0;
-    justify-content: center;
-    align-items: center;
+.main {
+  background-color: rgb(12, 12, 12);
+  border: 0.2rem, solid, rgb(255, 123, 0);
+  border-left: 0;
+  width: 100%;
+  max-width: 100%;
+  /* Máximo ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  padding: 3% 0 5% 0;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
 /* Contenedor de menu horizontal (visible en vista desktop) */
-.menu{
-    display: flex;
-    justify-content: center;
-    max-width: 16%;
-    /* Máximo ancho del contenedor */
-    border: 0.2rem , solid , rgb(255, 123, 0);
-    width: 16%;
-    box-sizing: border-box;
-    padding: 2%;
-    background-color: rgb(22, 22, 22);
-    border-bottom: 0;
+.menu {
+  display: flex;
+  justify-content: center;
+  max-width: 16%;
+  /* Máximo ancho del contenedor */
+  border: 0.2rem, solid, rgb(255, 123, 0);
+  width: 16%;
+  box-sizing: border-box;
+  padding: 2%;
+  background-color: rgb(22, 22, 22);
+  border-bottom: 0;
 }
 
 /* Lista con opciones del menu */
-.menu .menu__content .content__lista{
-    list-style: none; 
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+.menu .menu__content .content__lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-
 /* Contenedor de menu de iconos (Invisible en vista desktop) */
-.iconsSection{
-    display: none;
-    /* El display es none para que no se muetre en vista desktop */
-    margin-bottom: 1.5rem;
-    width: 100%;
-    max-width: 100%;
-  
+.iconsSection {
+  display: none;
+  /* El display es none para que no se muetre en vista desktop */
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Menu de iconos */
-.iconsSection .icon__nav{
-    width: 100%;
-    max-width: 100%;
-    /* Máximo ancho del contenedor */
+.iconsSection .icon__nav {
+  width: 100%;
+  max-width: 100%;
+  /* Máximo ancho del contenedor */
 }
 
 /* Lista de iconos */
-.icon__list{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    /* Máximo ancho del contenedor */
+.icon__list {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  /* Máximo ancho del contenedor */
 }
 
 /* Iconos con opciones */
-.icon__nav .icon__item{
-  color:  rgb(255, 123, 0);
+.icon__nav .icon__list .btn-icon {
+  color: rgb(255, 123, 0);
+  background-color: transparent;
+  border: transparent;
 }
 
 /* CLASE GENERAL PARA LAS OPCIONES DEL MENU */
-.btn-primary{
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.btn-primary {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 0;
+  background-color: transparent;
+  border: transparent;
 }
-.btn-view{
-    color: rgb(255, 123, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+.btn-view {
+  color: rgb(255, 123, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 /* EFECTO DE LAS OPCIONES DEL MENU */
-.btn-primary:hover{
-    color :rgb(255, 123, 0);
+.btn-primary:hover {
+  color: rgb(255, 123, 0);
 }
 
 /* CLASE GENERAL PARA BOTON COMIENZO */
-.btn-secundary{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:  rgb(255, 123, 0);
-    border-radius: 0.4rem;
-    max-width: 100%;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 2%;
-    padding: 0.8%;
-    margin-bottom: 2%;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border: 0;
-    color: white;
+.btn-secundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 123, 0);
+  border-radius: 0.4rem;
+  max-width: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2%;
+  padding: 0.8%;
+  margin-bottom: 2%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 0;
+  color: white;
 }
 
 /* CLASE GENERAL PARA BOTON RESALTADO */
-.btn-tertiary{
+.btn-tertiary {
   text-decoration: none;
   color: white;
 }
 
 /* EFECTO DE BOTON RESALTADO */
-.btn-tertiary:hover{
-    color :rgb(255, 123, 0);
+.btn-tertiary:hover {
+  color: rgb(255, 123, 0);
 }
 
 /* CLASE GENERAL DE LABEL */
-.label-primary{
-    font-weight: bold;
-    color: rgb(255, 123, 0);
+.label-primary {
+  font-weight: bold;
+  color: rgb(255, 123, 0);
 }
 
-.label-secondary{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+.label-secondary {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* CLASE GENERAL PARA BOTON IMAGEN */
-.btn-img{
-    border: 0.15rem solid transparent;
-    /* Setea un borde transparente con un ancho definido */
+.btn-img {
+  border: 0.15rem solid transparent;
+  /* Setea un borde transparente con un ancho definido */
 }
 
 /* EFECTO DE BOTON IMAGEN */
-.btn-img:hover{
-    border-color:rgb(255, 123, 0);
-    /* Cuando el cursor pasa por encima del hover el border pasa de transparente a naranja*/
+.btn-img:hover {
+  border-color: rgb(255, 123, 0);
+  /* Cuando el cursor pasa por encima del hover el border pasa de transparente a naranja*/
 }
 
-.btn-Enviar{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    background-color:rgb(255, 123, 0);
-    color: black;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+.btn-Enviar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 123, 0);
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
-.btn-Enviar:hover{
-    opacity: 0.9;
-    color: black;
+.btn-Enviar:hover {
+  opacity: 0.9;
+  color: black;
 }
-.btn-Cancelar{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: 0.18rem solid black;
-    border-radius: 0.4rem;
-    background-color:rgb(255, 123, 0);
-    color: black;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3rem;
-    text-decoration: none;
-     padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+.btn-Cancelar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 0.18rem solid black;
+  border-radius: 0.4rem;
+  background-color: rgb(255, 123, 0);
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
-.btn-Cancelar:hover{
-    opacity: 0.9;
-    color: black;
+.btn-Cancelar:hover {
+  opacity: 0.9;
+  color: black;
+}
 
+.btn-play:hover {
+  font-size: 1.4rem;
+  /* Aumenta el tamaño de la fuente cuando el cursor pasa por encima */
+  width: 100%;
+  max-width: 100%;
 }
-
-.btn-play:hover{
-    font-size: 1.4rem;
-    /* Aumenta el tamaño de la fuente cuando el cursor pasa por encima */
-    width: 100%;
-    max-width: 100%;
-}
-    /* CLASE GENERAL PARA IMAGEN */
-.img-primary{
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    box-sizing: border-box;
+/* CLASE GENERAL PARA IMAGEN */
+.img-primary {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 /* CLASE GENERAL PARA IFRAME */
-.video-primary{
-    max-width: 100%;
-    width: 100%;
-    height: 35rem;
+.video-primary {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* CLASE GENERAL DE INPUT*/
-.input-primary{
-    background-color: rgb(63, 63, 63);
-    color: white;
-    padding: 0.5% 1%;
-    border-radius: 5%;
+.input-primary {
+  background-color: rgb(63, 63, 63);
+  color: white;
+  padding: 0.5% 1%;
+  border-radius: 5%;
 }
 
-.input-secundary{
-    width: 40%;  
+.input-secundary {
+  width: 40%;
 }
 
-.input-tertiary{
-    background-color: rgb(12, 12, 12);
-    width: 60%;
-    height: 3.5em;
-    color: white;
-    
+.input-tertiary {
+  background-color: rgb(12, 12, 12);
+  width: 60%;
+  height: 3.5em;
+  color: white;
 }
 
 /* Estilo del footer */
-.footer{
-background-color: rgb(22, 22, 22);
-padding: 2%;
-max-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+.footer {
+  background-color: rgb(22, 22, 22);
+  padding: 2%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
 
 /* ESTILOS RESPONSIVOS */
 
 /* Para tablets y pantallas medianas */
-@media screen and (min-width: 769px) and (max-width: 1024px){
-   
-    .contenedorPrincipal{
-        flex-direction: column;
-        /* Cambia el  flex-direccion(de row a column), para adaptarlo tablets y pantallas medianas */
-        align-items:flex-start;
-    }
-    .menu{
-        display:none;
-        /* Esconde el menu horizontal */
-    }
- 
-    .iconsSection{
-        display: flex;
-        /* Despliega el menu de iconos */
-    }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .contenedorPrincipal {
+    flex-direction: column;
+    /* Cambia el  flex-direccion(de row a column), para adaptarlo tablets y pantallas medianas */
+    align-items: flex-start;
+  }
+  .menu {
+    display: none;
+    /* Esconde el menu horizontal */
+  }
 
-    .video-primary{
-        height: 28em;
-        max-height: 28em;
-    
-    }
-    .input-primary{
-        width: 30%;
-        max-width: 30%;
-        /* Asigna un ancho y un ancho maximo*/
-        height: 2.5em;
-        max-height: 2.5em;
-        /* Asigna un alto y un alto maximo*/
-    }
-    
-    .input-secundary{
-        width: 65%;
-        max-width: 65%;
-        height: 1.5em;
-        max-height: 1.5em;
-        font-size: 1.4em;
-        /* Modifica el tamaño de la fuente, para adaptarla tablets y pantallas medianas */
-    }
+  .iconsSection {
+    display: flex;
+    /* Despliega el menu de iconos */
+  }
+
+  .video-primary {
+    height: 28em;
+    max-height: 28em;
+  }
+  .input-primary {
+    width: 30%;
+    max-width: 30%;
+    /* Asigna un ancho y un ancho maximo*/
+    height: 2.5em;
+    max-height: 2.5em;
+    /* Asigna un alto y un alto maximo*/
+  }
+
+  .input-secundary {
+    width: 65%;
+    max-width: 65%;
+    height: 1.5em;
+    max-height: 1.5em;
+    font-size: 1.4em;
+    /* Modifica el tamaño de la fuente, para adaptarla tablets y pantallas medianas */
+  }
 }
 
 /* Para tablets pequeñas y celulares */
-@media only screen and (max-width: 768px){
-    
-    .contenedorPrincipal{
-        flex-direction: column;
-        /* Cambia el  flex-direccion(de row a column), para adaptarlo tablets pequeñas y celulares */
-        align-items: center;
-    }
-    .menu{
-        display:none;
-         /* Esconde el menu horizontal */
-    }
-   
-    .iconsSection{
-        display: flex;
-        /* Despliega el menu de iconos */
-    }
+@media only screen and (max-width: 768px) {
+  .contenedorPrincipal {
+    flex-direction: column;
+    /* Cambia el  flex-direccion(de row a column), para adaptarlo tablets pequeñas y celulares */
+    align-items: center;
+  }
+  .menu {
+    display: none;
+    /* Esconde el menu horizontal */
+  }
 
-    .btn-secundary{
-        height: 2em;
-        max-height: 2em;
-    }
+  .iconsSection {
+    display: flex;
+    /* Despliega el menu de iconos */
+  }
 
-    .video-primary{
-        height: 20em;
-        max-height: 28em;
-    }
+  .btn-secundary {
+    height: 2em;
+    max-height: 2em;
+  }
 
-    .input-primary{
-        width: 50%;
-        max-width: 50%;
-        /* Asigna un ancho y un ancho maximo*/
-        height: 2.5em;
-        max-height: 2.5em;
-        /* Asigna un alto y un alto maximo*/
-    }
-    
-    .input-secundary{
-        width: 100%;
-        max-width: 100%;
-        /* Asigna un ancho y un ancho maximo*/
-        height: 2.3em;
-        max-height: 2.3em;
-        /* Asigna un alto y un alto maximo*/
-        font-size: 1.5em;
-        /* Modifica el tamaño de la fuente, para adaptarla tablets pequeñas y celulares  */
-    }
-    .input-tertiary{
-        width: 100%;
-        max-width: 100%;
-        height: 3em;   
-    }
-    .btn-Cancelar{
-        padding-top: 0.05rem;
-    }
+  .video-primary {
+    height: 20em;
+    max-height: 28em;
+  }
+
+  .input-primary {
+    width: 50%;
+    max-width: 50%;
+    /* Asigna un ancho y un ancho maximo*/
+    height: 2.5em;
+    max-height: 2.5em;
+    /* Asigna un alto y un alto maximo*/
+  }
+
+  .input-secundary {
+    width: 100%;
+    max-width: 100%;
+    /* Asigna un ancho y un ancho maximo*/
+    height: 2.3em;
+    max-height: 2.3em;
+    /* Asigna un alto y un alto maximo*/
+    font-size: 1.5em;
+    /* Modifica el tamaño de la fuente, para adaptarla tablets pequeñas y celulares  */
+  }
+  .input-tertiary {
+    width: 100%;
+    max-width: 100%;
+    height: 3em;
+  }
+  .btn-Cancelar {
+    padding-top: 0.05rem;
+  }
 }

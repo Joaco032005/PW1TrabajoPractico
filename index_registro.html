@@ -10,103 +10,107 @@
 </head>
 
 <body>
- 
-    <main class="form-container">
-      
-      <header class="titulo-registrarse">
-        <h3>Registrarse</h3>     
-      </header>  
-           
-          <form action="index.html" method="get" novalidate class="register-form">
-            
-          <section class="datos-personales">
 
-          <article class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre">
-          </article>
-            <div class="Error js-name-error"></div>
+  <main class="form-container">
 
-          <article class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido">
-          </article>
-            <div class="Error js-lastname-error"></div>
+    <header class="titulo-registrarse">
+      <a href="index.html" class="btn-volver-login">← Volver al Login</a>
+      <h3>Registrarse</h3>
+    </header>
 
-          <article class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Ingrese Email">
-          </article>
-            <div class="Error js-mail-error"></div>
+    <form action="index.html" method="get" novalidate class="register-form">
 
-          <article class="form-group">
-            <label for="user">Nombre de Usuario</label>
-            <input type="text" id="user" name="user" placeholder="Nombre de Usuario">
-          </article>
-            <div class="Error js-error-user"></div>
+      <section class="datos-personales">
 
-          <article class="form-group">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" placeholder="Contraseña">
-          </article>
-            <div class="Error js-error-password"></div>
+        <article class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre">
+        </article>
+        <div class="Error js-name-error"></div>
 
-          <article class="form-group">
-            <label for="repeatPassword">Repetir Contraseña</label>
-            <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña">
-          </article>
-          <div class="Error js-error-repeatPassword"></div>
-        </section>
-        
-        <section class="payment-method">
+        <article class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido">
+        </article>
+        <div class="Error js-lastname-error"></div>
 
-          <h2>Método de Pago</h2> <br>
+        <article class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Ingrese Email">
+        </article>
+        <div class="Error js-mail-error"></div>
 
-          <label for="metodo_pago">
-            <input type="radio" name="metodo_pago" value="tarjeta" class="metodo-tarjeta">
-            Tarjeta de Crédito
-          </label>
-          
-          <!-- Tarjeta de Crédito -->
-          <article class="form-group-pagos form-group-pagos-tarjeta">
-            <label class="metodo-card"><input type="text" name="numero_tarjeta" placeholder="Numero de Tarjeta"></label>
-            <label class="metodo-card"><input type="password" name="clave_tarjeta" placeholder="XXX"></label>
-          </article>
+        <article class="form-group">
+          <label for="user">Nombre de Usuario</label>
+          <input type="text" id="user" name="user" placeholder="Nombre de Usuario">
+        </article>
+        <div class="Error js-error-user"></div>
 
-          <!-- Cupón de Pago -->
+        <article class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Contraseña">
+        </article>
+        <div class="Error js-error-password"></div>
 
-          <label for="metodo_pago">
-            <input type="radio" name="metodo_pago" value="cupon" class="metodo-tipos-pago">
-            Cupón de Pago
-          </label>
-          
-          <article class="form-group-pagos">
-            <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="pago-facil"> Pago
-              Fácil</label>
-            <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="rapipago">
-              Rapipago</label>
-          </article>
+        <article class="form-group">
+          <label for="repeatPassword">Repetir Contraseña</label>
+          <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña">
+        </article>
+        <div class="Error js-error-repeatPassword"></div>
+      </section>
 
-          <label for="metodo_pago">
-            <input type="radio" name="metodo_pago" value="transferencia" class="metodo-transferencia">
-            Transferencia Bancaria
-          </label>
+      <section class="payment-method">
 
-          <!-- Transferencia Bancaria -->
-          <article class="form-group-pagos">
-            <p>CBU: 1234567890123456789012</p>
-          </article>
+        <h2>Método de Pago</h2> <br>
 
-          <!-- Botón ENVIAR / CANCELAR form -->
-          <article class="form-group-pagos form-group-pagos-btn">
-            <button type="submit" class="btn-Enviar"> Enviar </button>
-            <a class="btn_cancelar" href="index.html"> Cancelar</a>
-          </article>
-        </section>
-      </form>
-    </main>
+        <label for="metodo_pago">
+          <input type="radio" name="metodo_pago" value="tarjeta" class="metodo-tarjeta">
+          Tarjeta de Crédito
+        </label>
 
-    <script src="./scripts/index_registro.js"></script>
+        <!-- Tarjeta de Crédito -->
+        <article class="form-group-pagos form-group-pagos-tarjeta">
+          <label class="metodo-card"><input type="text" name="numero_tarjeta" placeholder="Numero de Tarjeta"></label>
+          <label class="metodo-card"><input type="password" name="clave_tarjeta" placeholder="XXX"></label>
+        </article>
+
+        <!-- Cupón de Pago -->
+
+        <label for="metodo_pago">
+          <input type="radio" name="metodo_pago" value="cupon" class="metodo-tipos-pago">
+          Cupón de Pago
+        </label>
+
+        <article class="form-group-pagos">
+          <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="pago-facil"> Pago
+            Fácil</label>
+          <label for="cupon_tipo" class="metodo-cupon"><input type="radio" name="cupon_tipo" value="rapipago">
+            Rapipago</label>
+        </article>
+
+        <label for="metodo_pago">
+          <input type="radio" name="metodo_pago" value="transferencia" class="metodo-transferencia">
+          Transferencia Bancaria
+        </label>
+
+        <!-- Transferencia Bancaria -->
+        <article class="form-group-pagos">
+          <p>CBU: 1234567890123456789012</p>
+        </article>
+
+        <!-- X Bloque de error agregado para método de pago -->
+        <div class="Error js-error-metodo-pago"></div>
+
+        <!-- Botón ENVIAR / CANCELAR form -->
+        <article class="form-group-pagos form-group-pagos-btn">
+          <button type="submit" class="btn-Enviar"> Enviar </button>
+          <a class="btn_cancelar" href="index.html"> Cancelar</a>
+        </article>
+      </section>
+    </form>
+  </main>
+
+  <script src="./scripts/index_registro.js"></script>
 </body>
 
 </html>

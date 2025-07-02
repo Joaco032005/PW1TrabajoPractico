@@ -22,23 +22,25 @@
 
         <article class="info__content">
           <label class="label label-primary" for="Mail"> Mail: </label>
-          <input class="input input-tertiary" type="text" name="IngreseMail" size="20" placeholder="Ingrese Mail"
-            required>
+          <input class="input input-tertiary js-input-mail" type="text" name="IngreseMail" size="20"
+            placeholder="Ingrese Mail">
         </article>
 
         <article class="info__content">
           <label class="label label-primary" for="Usuario"> Usuario: </label>
-          <input class="input input-tertiary" type="text" name="IngreseUsuario" size="20" placeholder="Ingrese Usuario"
-            required>
+          <input class="input input-tertiary js-input-nombre" type="text" name="IngreseUsuario" size="20"
+            placeholder="Ingrese Usuario">
         </article>
       </section>
 
       <section class="buttonContainer">
-        <button class="btn btn-Enviar" type="submit" name="Aceptar" id="BotonEnviar">Enviar</button>
-        <a class="btn btn-Cancelar" href="index.html"> Cancelar</a>
+        <button class="boton boton-enviar " type="button" name="Aceptar" id="BotonEnviar" disabled>Enviar</button>
+        <button class="boton boton-cancelar " href="index.html"> Cancelar</button>
       </section>
     </form>
   </main>
+
+  <script src="./scripts/index_recuperarContraseña.js"> </script>
 </body>
 
 </html>

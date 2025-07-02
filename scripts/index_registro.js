@@ -17,7 +17,7 @@ function validacionRegister() {
     APELLIDO: /^[a-zA-Z\s]+$/,
     EMAIL: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
     USERNAME: /^[a-zA-Z0-9]+$/,
-    PASSWORD: /^[a-zA-Z0-9._%+-]{8}$/,
+    PASSWORD: /^(?=(?:.*[a-zA-Z]){2,})(?=(?:.*\d){2,})(?=(?:.*[^a-zA-Z0-9\s]|_){2,})[^\s]{8,}$/
   };
 
   function marcarError(input, mostrarError) {
@@ -65,9 +65,11 @@ function validacionRegister() {
       } else if (metodoPago.value === "cupon") {
         habilitar = cuponSeleccionados.length > 0;
       }
+      btnConfirmar.disabled = false;
+      btnConfirmar.reset();
+    } else {
+      btnConfirmar.disabled = true;
     }
-
-    btnConfirmar.disabled = !habilitar;
   }
 
   // Limpiar selección de cupones al cambiar método de pago
@@ -118,6 +120,7 @@ function validacionRegister() {
     const claveTarjeta = formRegister.querySelector(
       'input[name="clave_tarjeta"]'
     );
+    const cuponOpcion = formRegister.querySelector("#metodo_cupones");
     const cupones = formRegister.querySelectorAll('input[name="cupon_tipo"]');
     const cuponSeleccionados = formRegister.querySelectorAll(
       'input[name="cupon_tipo"]:checked'
@@ -204,6 +207,7 @@ function validacionRegister() {
       marcarError(repeatPasswordInput, true);
       isValid = false;
     } else if (passwordrepeat !== password) {
+      errorPasswordRepeat.className = "error-registro";
       errorPasswordRepeat.textContent = "Las contraseñas no coinciden";
       marcarError(repeatPasswordInput, true);
       isValid = false;
@@ -212,6 +216,7 @@ function validacionRegister() {
     if (!metodoPago) {
       errorMetodoPago.textContent = "Debe seleccionar un método de pago";
       isValid = false;
+      cupones.disabled = true;
     } else if (metodoPago.value === "tarjeta") {
       const claveTarjetaVal = claveTarjeta.value.trim();
       const numeroTarjetaVal = numeroTarjeta.value.trim();
@@ -225,12 +230,21 @@ function validacionRegister() {
         marcarError(claveTarjeta, true);
         isValid = false;
       } else if (claveTarjetaVal === "000") {
-        errorMetodoPago.textContent = "La clave no puede ser 000";
+        errorMetodoPago.className = "error-registro";
+        errorMetodoPago.textContent = "La clave no puede ser 000.";
         marcarError(claveTarjeta, true);
         isValid = false;
       }
 
+      if (numeroTarjetaVal === "") {
+        errorMetodoPago.className = "error-registro";
+        errorMetodoPago.textContent =
+          "El campo de numeros de la tarjeta se encuentra vacio";
+        marcarError(numeroTarjetaVal, true);
+        isValid = false;
+      }
       if (!/^\d{16}$/.test(numeroTarjetaVal)) {
+        errorMetodoPago.className = "error-registro";
         errorMetodoPago.textContent =
           "El número de tarjeta debe tener 16 dígitos numéricos";
         marcarError(numeroTarjeta, true);
@@ -246,6 +260,7 @@ function validacionRegister() {
           (sumaPrimeros15 % 2 === 1 && ultimo % 2 !== 0) ||
           (sumaPrimeros15 % 2 === 0 && ultimo % 2 === 0)
         ) {
+          errorMetodoPago.className = "error-registro";
           errorMetodoPago.textContent =
             "Número de tarjeta inválido según regla del último dígito";
           marcarError(numeroTarjeta, true);
@@ -278,25 +293,29 @@ function validacionRegister() {
         usuariosRegistrados = [];
       }
 
-      const nuevoUsuario = {
-        nombre,
-        apellido,
-        email: mail,
-        usuario: userName,
-        password,
-        metodoPago: metodoPago ? metodoPago.value : null,
-        datosPago:
-          metodoPago && metodoPago.value === "tarjeta"
+const nuevoUsuario = {
+  nombre,
+  apellido,
+  email: mail,
+  usuario: userName,
+  password,
+  metodoPago: metodoPago
+    ? {
+        tipo: metodoPago.value,
+        datos:
+          metodoPago.value === "tarjeta"
             ? {
                 numeroTarjeta: numeroTarjeta.value.trim(),
-                claveTarjeta: claveTarjeta.value.trim(),
+                codigoSeguridad: claveTarjeta.value.trim(),
+              }
+            : metodoPago.value === "cupon"
+            ? {
+                cuponSeleccionado: cuponSeleccionados[0]?.parentElement.textContent.trim(),
               }
             : null,
-        cupones:
-          metodoPago && metodoPago.value === "cupon"
-            ? Array.from(cuponSeleccionados).map((el) => el.value)
-            : [],
-      };
+      }
+    : null,
+};
 
       const existe = usuariosRegistrados.some(
         (user) =>
@@ -314,12 +333,18 @@ function validacionRegister() {
         "usuariosRegistrados",
         JSON.stringify(usuariosRegistrados)
       );
+        localStorage.setItem("usuarioActivo", JSON.stringify(nuevoUsuario));
 
       alert("¡Registro exitoso!");
       formRegister.reset();
       formRegister.querySelectorAll(".error").forEach((input) => {
         input.classList.remove("error");
       });
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000);
+
       toggleConfirmButton();
     }
   });
@@ -329,7 +354,7 @@ validacionRegister();
 function validarContraseña(password) {
   const letras = (password.match(/[a-zA-Z]/g) || []).length;
   const numeros = (password.match(/[0-9]/g) || []).length;
-  const especiales = (password.match(/[._%+-]/g) || []).length;
+  const especiales = (password.match(/[.!%$&+-]/g) || []).length;
 
   if (letras >= 2 && numeros >= 2 && especiales >= 2) {
     return true;

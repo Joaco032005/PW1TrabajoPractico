@@ -87,6 +87,11 @@ input {
   color: rgb(255, 131, 14);
 }
 
+.error-registro {
+  display: flex;
+  color: red;
+}
+
 /*METODOS DE PAGO*/
 
 h2 {

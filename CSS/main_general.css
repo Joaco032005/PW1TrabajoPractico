@@ -187,6 +187,13 @@ body {
   opacity: 0.9;
   color: black;
 }
+
+.btn-Enviar:disabled {
+  background-color: #ccc;
+  color: #666;
+  opacity: 1;
+}
+
 .btn-Cancelar {
   display: flex;
   width: 100%;
@@ -257,6 +264,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 9.2rem;
 }
 
 /* ESTILOS RESPONSIVOS */
